@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Grand+Hotel|Leckerli+One');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import '../../assets/css/spinner.css';
+
+.title {
+   
+    text-shadow:   5px 4px 19px rgba(2, 2, 2, 0.89);
+
+}
+
+.title-container {
+    padding: 40px;
+    // background-color: #4EB7F5;
+    background-size: 0.5%;
+}
+
+.basic {
+    color: white;
+    font-size: 44px;
+}
+
+.first {
+    //font-family: 'Leckerli One', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 20px;
+    border-radius: 11px;
+}
+
+ion-item {
+    // border-radius: 11px;
+    color: color($colors, primary);
+}
+
+.btnSignIn {
+    background-color: color($colors, primary);
+    border-radius: 11px;
+    color: white;
+}
+
+.btnSignUp {
+    background-color: #00A6DC;
+    border-radius: 11px;
+    color: white;
+}
+
+
+.bg-color {
+    // background-image: linear-gradient(to bottom, #68558d, #3d75b4, #0095c6, #00b1c1, #00c9a7);
+    //background-image: linear-gradient(to top, #68558d, #3d75b4, #0095c6, #00b1c1, #00c9a7);
+    //background-image: linear-gradient(to top, #00c9a7, #00c6d9, #00bcff, #2ba9ff, #b38bff);
+    background-image: linear-gradient(to top, #f9eaff, #d1dfff, #89daff, #1cd5e4, #00c9a4);
+}
+
+.toast-err-css {
+    .toast-message 
+    { 
+        color: white; 
+        background: color($colors, danger) !important; 
+        font-family: 'Montserrat', sans-serif;
+    }
+}
+
+.toast-suc-css { 
+    .toast-message 
+    { 
+        color: white; 
+        background: color($colors, secondary) !important;
+        font-family: 'Montserrat', sans-serif;
+    } 
+}
+
+ion-loading.transparent {
+    .loading-wrapper {
+      background: transparent;
+      box-shadow: none;
+    }
+  }
+

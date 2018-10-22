@@ -1,0 +1,79 @@
+<ion-header>
+  <!-- <ion-navbar>
+  <ion-title>
+  Ionic Blank
+  </ion-title>
+  </ion-navbar> -->
+  </ion-header>
+  
+  <ion-content class="bg-color" padding>
+  
+    <ion-grid text-center>
+      <ion-row>
+        <ion-col>
+          <div class="title-container">
+            <h1 class="basic first animated slideInDown slow">TGather</h1>
+          </div>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row>
+        <ion-col width-15>
+          <ion-item class="first animated slideInLeft slow">
+            <ion-label>
+              <ion-icon name="ios-mail"></ion-icon>
+            </ion-label>
+            <ion-input type="email" placeholder="Email" [(ngModel)]="user.email"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row>
+        <ion-col width-15>
+          <ion-item class="first animated slideInLeft slow">
+            <ion-label>
+              <ion-icon name="ios-lock"></ion-icon>
+            </ion-label>
+            <ion-input type="password" placeholder="Password" [(ngModel)]="user.password"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row style="padding-top: 3.5px;">
+        <ion-col>
+          <button ion-button full icon-start class="first btnSignIn animated slideInLeft slow" (click)="signIn(user)"><ion-icon name="ios-log-in"></ion-icon>
+          SIGN IN
+          </button>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row>
+        <ion-col>
+          <button ion-button full icon-start class="first btnSignUp animated slideInLeft slow" (click)="register()"><ion-icon name="ios-create-outline"></ion-icon>
+          SIGN UP
+          </button>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row>
+        <ion-col class="first animated slideInLeft slow">
+          <span ion-text tappable (click)="presentPrompt()">Forgot Password? <strong>Click Here</strong></span>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row>
+        <ion-col>
+          <h3>{{test}}</h3>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+            <p text-center style="bottom: 0; padding-top: 30px;" class="animated slideInRight slow">© TGather 2018</p>
+        </ion-col>
+      </ion-row>
+    
+    </ion-grid>  
+            
+  </ion-content>
+

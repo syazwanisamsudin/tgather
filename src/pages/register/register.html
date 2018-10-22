@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-navbar color="dark" class="first-reg">
+    <ion-title>Sign Up</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-register" padding>
+
+    <div [formGroup]="registerForm">
+        <ion-grid text-center>
+
+            <ion-row>
+              <ion-col>
+                <div class="title-container-reg">
+                    <h1 class="basic-reg first-reg animated slideInDown slow">Create New Account</h1>
+                </div>
+              </ion-col>       
+            </ion-row>
+      
+            <ion-row>
+              <ion-col width-15>
+                <ion-item class="first animated slideInLeft slow">
+                  <ion-label color="primary" class="first-reg" stacked>Firstname</ion-label>
+                  <ion-input type="text" [(ngModel)]="user.firstname" formControlName="firstname"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+      
+            <ion-row>
+              <ion-col width-15>
+                <ion-item class="first animated slideInLeft slow">
+                  <ion-label color="primary" class="first-reg" stacked>Lastname</ion-label>
+                  <ion-input type="text" [(ngModel)]="user.lastname" formControlName="lastname"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+      
+            <ion-row>
+              <ion-col width-15>
+                <ion-item class="first animated slideInLeft slow">
+                  <ion-label color="primary" class="first-reg" stacked>Email</ion-label>
+                  <ion-input type="email" [(ngModel)]="user.email" formControlName="email"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+      
+            <ion-row>
+              <ion-col width-15>
+                <ion-item class="first animated slideInLeft slow">
+                  <ion-label color="primary" class="first-reg" stacked>Password</ion-label>
+                  <ion-input type="password" [(ngModel)]="user.password" formControlName="password"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+      
+            <ion-row style="padding-top: 20px;">
+              <ion-col>
+                <button ion-button icon-start class="first-reg btnSignUpReg animated slideInLeft slow" block (click)="addAcc(user)" [disabled]="!registerForm.valid"><ion-icon name="ios-create-outline"></ion-icon>
+                  SIGN UP
+                </button>
+              </ion-col>
+            </ion-row>
+      
+          </ion-grid>
+    </div>
+
+</ion-content>
+
+

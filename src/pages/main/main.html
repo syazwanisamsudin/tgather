@@ -1,0 +1,74 @@
+<!--
+  Generated template for the MainPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+
+  <ion-navbar hideBackButton color="dark">
+      <ion-title class="navFont">TGather</ion-title>
+      <ion-buttons end (click)="presentPopover($event)">
+          <button ion-button icon-only>
+            <ion-icon name="more"></ion-icon>
+          </button>
+      </ion-buttons>
+  
+  </ion-navbar>
+
+
+  <ion-toolbar> 
+    <ion-searchbar placeholder="Search group travel ..." showCancelButton (ionInput)="filterItems($event)"></ion-searchbar>
+  </ion-toolbar>
+
+
+</ion-header>
+
+
+<ion-content>
+  <!-- <div class="example">
+    <h1>Welcome {{user.firstname}} {{user.lastname}}</h1>
+    <p>{{user.userID}}</p>
+    <ion-icon name="logo-youtube" [ngStyle]="{'color': '#fc466b', 'font-size': '40px'  }"></ion-icon>
+  </div> -->
+  
+
+<div *ngIf="item.length > 0">
+  <ion-list>
+    <ion-item-sliding *ngFor="let x of item">   
+          <ion-item  (click)="navigate(x)" class="item-selects">
+              <ion-avatar item-start [ngStyle]="{'size': '15px'}">
+          <img src={{x.imagePath}}>
+              </ion-avatar>
+              <h2>{{x.title}} &nbsp;</h2>
+              <p>{{x.sub}}</p> 
+              <ion-note item-end><ion-badge>{{x.badge}}</ion-badge></ion-note>
+          </ion-item>
+      <ion-item-options>
+        <button ion-button color="archive" icon-start (click)="archive()">
+          <ion-icon name="md-archive"></ion-icon>
+          Archive
+        </button>
+        <button ion-button color="danger" icon-start (click)="delete()">
+          <ion-icon name="ios-trash"></ion-icon>
+          Delete
+        </button>  
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</div>
+
+<div *ngIf="item.length == 0" text-center padding>  
+  <ion-item>
+    <h3>Nothing to show here . . . </h3> 
+  </ion-item>
+</div>
+
+
+
+  <ion-fab right bottom>
+        <button  ion-fab class="btn-grad"  (click)="openModal()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+
+</ion-content>

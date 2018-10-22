@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+// .btn-grad {background-image: linear-gradient(to right, #02AAB0 0%, #00CDAC 51%, #02AAB0 100%)}
+.btn-grad {background-color: #488aff}
+.btn-grad:active {  background-image: linear-gradient(to left, #fc466b, #3f5efb); }
+
+.item-selects {
+    background-color: whitesmoke;
+}
+
+.item-selects:active {
+    background-color: grey;
+}
+
+
+.custom-popover .popover-content {
+    width: 50% !important;
+}
+
+ion-content {
+
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.navFont {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;    
+}
+
+.toolbar .searchbar {
+    font-family: 'Montserrat', sans-serif;
+}
